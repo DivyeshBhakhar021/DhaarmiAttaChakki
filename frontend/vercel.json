@@ -1,5 +1,11 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/dist",
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/node",
+      "config": { "nodeVersion": "18.x" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "/" }]
 }
