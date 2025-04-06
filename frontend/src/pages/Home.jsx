@@ -564,7 +564,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 1 HP Premium Steel Body with Hopper Fully Automatic Atta Chakki,with masala Flour Mill, Aata Maker, ,Domestic Ghar Ghanti, SteelGrind 2.0 Flourmill",
       originalPrice: 28000,
       salePrice: 26000,
-      image: "../../public/product/1743844118639.jpg",
+      image: "./product/1743844118639.jpg",
       type: "Steel Body with Hopper",
       capacity: 1,
       inStock: true,
