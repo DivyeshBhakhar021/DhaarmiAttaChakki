@@ -865,35 +865,105 @@ const RetailersSection = () => {
           }}
         ></div> */}
       </div>
-      <div class="flex flex-col lg:flex-row gap-6 p-4 max-w-6xl mx-auto">
-  {/* <!-- Video 1 --> */}
-  <div class="relative w-full lg:w-1/2 h-60 sm:h-72 md:h-80 lg:h-[400px] xl:h-[450px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg">
-    <iframe 
-      class="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/lXxiPnTCh3I" 
-      title="YouTube video 1" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  {/* <!-- Video 2 --> */}
-  <div class="relative w-full lg:w-1/2 h-60 sm:h-72 md:h-80 lg:h-[400px] xl:h-[450px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg">
-    <iframe 
-      class="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/cWRXRrste6E" 
-      title="YouTube video 2" 
-      frameborder="0" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</div>
+      
 
     </section>
   );
 };
 
+const YouTubePopupPlayer = () => {
+  const [fullscreenVideo, setFullscreenVideo] = useState(null);
 
+  const videos = [
+    {
+      id: "Ek1bHZqGsRI",
+      title: "YouTube Video 3",
+      img: "./home/d1.jpg",
+    },
+    {
+      id: "UAOTdWl9L6U",
+      title: "YouTube Video 4",
+      img: "./home/d2.jpg",
+    },
+  ];
+
+  
+
+  const openFullscreen = (videoId) => {
+    setFullscreenVideo(videoId);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenVideo(null);
+    document.body.style.overflow = "auto";
+  };
+
+  return (
+    <div className="p-4 max-w-6xl mx-auto">
+      {/* Video Container */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {videos.map((video) => (
+          <div
+            key={video.id + Math.random()}
+            className="relative w-full h-64 md:h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg 
+              transition-all duration-300 transform hover:scale-105 hover:shadow-xl cursor-pointer"
+            onClick={() => openFullscreen(video.id)}
+          >
+            {/* Thumbnail with play button overlay */}
+            <div className="absolute inset-0 bg-gray-200 flex justify-center items-center group">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center z-10 group-hover:scale-110 transition-transform">
+                <div className="w-0 h-0 border-t-8 border-b-8 border-l-16 border-transparent border-l-white ml-1"></div>
+              </div>
+
+              {/* <div className="absolute inset-0 flex items-center justify-center">
+                <img
+                  src={video.img}
+                  alt={video.title}
+                  className="max-h-full max-w-full object-cover rounded"
+                />
+              </div> */}
+            </div>
+
+            {/* Video Title Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 top-0 bg-black bg-opacity-70 text-white">
+              <img
+                src={video.img}
+                alt={video.title}
+                className="w-full h-full  rounded"
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Fullscreen Modal */}
+      {fullscreenVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+          <div className="relative w-full max-w-4xl h-64 sm:h-96 md:h-[500px] lg:h-[600px]">
+            <button
+              onClick={closeFullscreen}
+              className="absolute -top-12 right-0 text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-lg font-bold z-10 transition-colors"
+            >
+              Close
+            </button>
+
+            <div className="w-full h-full">
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${fullscreenVideo}?autoplay=1`}
+                title="YouTube Video Player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 
 
@@ -930,6 +1000,7 @@ const HomePage = () => {
       {/* <AboutSection /> */}
       <GrainDisplay />
       <RetailersSection />
+      <YouTubePopupPlayer />
     </div>
   );
 };

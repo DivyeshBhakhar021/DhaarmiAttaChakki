@@ -13,7 +13,7 @@ const Header = ({ cartItemCount }) => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Commercial Aata Chakki", path: "/commercial-aata-chakki" },
+    { name: "Product", path: "/commercial-aata-chakki" },
     { name: "Contact Us", path: "/contact" },
     {
       name: "Cart",
