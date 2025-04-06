@@ -9,7 +9,7 @@ const Footer = () => (
         <div className="md:w-1/4 mb-8 md:mb-0">
           <motion.img
             whileHover={{ scale: 1.05 }}
-            src="../../public/home/logo.png"
+            src="./home/logo.png"
             alt="Dhaarmi Logo"
             className="h-10 mb-4"
           />

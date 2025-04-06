@@ -112,7 +112,7 @@ const DhaarmiWebsite = () => {
       <div
         className="bg-red-50 w-full h-full pt-10 pb-3 px-2 relative"
         style={{
-          backgroundImage: "url('../../public/home/back.jpg')",
+          backgroundImage: "url('./home/back.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -264,7 +264,7 @@ const DhaarmiWebsite = () => {
         <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
             <img
-              src="../../public/home/c3.jpg"
+              src="./home/c3.jpg"
               alt="WOW Aata Chakki Product"
               className="rounded-md shadow-md max-w-full h-96"
             />

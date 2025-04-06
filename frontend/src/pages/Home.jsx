@@ -13,20 +13,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 const slides = [
   {
-    image: "../../public/home/HERO1.png",
+    image: "./home/HERO1.png",
     title: "Experience Freshly Ground Flour",
     description:
       "Our Atta Chakki brings you the purest and freshest flour right at home.",
     extraImages: [
-      "../assets/imges/a1.jpg",
-      "../assets/imges/a1.jpg",
-      "../assets/imges/a1.jpg",
+      "./assets/imges/a1.jpg",
+      "./assets/imges/a1.jpg",
+      "./assets/imges/a1.jpg",
     ],
     logos: ["s11.png", "s13.png"], // Logos for this slidem,
     text: ["High Quality Motor", "2400 RPM "],
   },
   {
-    image: "../../public/home/HERO3.png",
+    image: "./home/HERO3.png",
     title: "Compact and Elegant Design",
     description:
       "Fits beautifully into your kitchen while delivering superior performance.",
@@ -35,7 +35,7 @@ const slides = [
     text: ["Electricity Consumption", "S.S. High Quality Blade"],
   },
   {
-    image: "../../public/home/HERO2.png",
+    image: "./home/HERO2.png",
     title: "High-Quality Grinding Mechanism",
     description:
       "Built with precision to ensure finely ground flour for your daily needs.",
@@ -160,21 +160,21 @@ const FeaturesSection = () => {
 
   const features = [
     {
-      image: "../../public/home/b1.png", // Update with your actual image path
+      image: "./home/b1.png", // Update with your actual image path
       title: "Best Quality",
       description:
         "Our Atta Chakki Machine offers robust quality, high efficiency, and low power consumption. It ensures smooth and fine grinding for the best flour output. Safe, durable, and low maintenance, it is perfect for both home and business use.",
       color: "blue",
     },
     {
-      image: "../../public/home/b2.png", // Update with your actual image path
+      image: "./home/b2.png", // Update with your actual image path
       title: "Best Prices",
       description:
         "Dhaarmi Atta Chakki Offers the best quality at a competitive price. Direct from the manufacturer, ensuring affordability without compromising performance.",
       color: "green",
     },
     {
-      image: "../../public/home/b3.png", // Update with your actual image path
+      image: "./home/b3.png", // Update with your actual image path
       title: "Support System",
       description:
         "Need help choosing the right Meti Atta Chakki Machine? Our team is ready to assist you with product details, pricing, and bulk orders. Contact us for expert guidance and quick support!",
@@ -330,12 +330,12 @@ const ProductSection = () => {
     {
       title: "Domestic Atta Chakki",
       bgColor: "bg-orange-100",
-      image: "../../public/home/a1.png",
+      image: "./home/a1.png",
     },
     {
       title: "Commercial Atta chakki",
       bgColor: "bg-blue-100",
-      image: "../../public/home/ab2.png",
+      image: "./home/ab2.png",
     },
   ];
 
@@ -368,18 +368,18 @@ const ProductSection = () => {
 };
 
 const grains = [
-  { name: "WHEAT", weight: "8 TO 10 KG", image: "../../public/home/p7.jpg" },
-  { name: "MAIZE", weight: "7 TO 10 KG", image: "../../public/home/p2.png" },
-  { name: "HALDI", weight: "7 TO 9 KG", image: "../../public/home/p15.jpg" },
-  { name: "MUNG", weight: "7 TO 10 KG", image: "../../public/home/p4.jpg" },
-  { name: "RICE", weight: "7 TO 9 KG", image: "../../public/home/p5.jpeg" },
-  { name: "DHANIYA", weight: "4 TO 5 KG", image: "../../public/home/p1.jpg" },
-  { name: "BESAN", weight: "10 TO 12 KG", image: "../../public/home/p16.png" },
-  { name: "URAD", weight: "7 TO 9 KG", image: "../../public/home/p8.jpg" },
-  { name: "KALIMIRCH", weight: "7 TO 8 KG", image: "../../public/home/p9.jpg" },
-  { name: "RAVA", weight: "8 TO 10 KG", image: "../../public/home/p10.jpg" },
-  { name: "JUWAR", weight: "7 TO 9 KG", image: "../../public/home/p12.jpg" },
-  { name: "SUGAR", weight: "8 TO 10 KG", image: "../../public/home/p13.jpg" },
+  { name: "WHEAT", weight: "8 TO 10 KG", image: "./home/p7.jpg" },
+  { name: "MAIZE", weight: "7 TO 10 KG", image: "./home/p2.png" },
+  { name: "HALDI", weight: "7 TO 9 KG", image: "./home/p15.jpg" },
+  { name: "MUNG", weight: "7 TO 10 KG", image: "./home/p4.jpg" },
+  { name: "RICE", weight: "7 TO 9 KG", image: "./home/p5.jpeg" },
+  { name: "DHANIYA", weight: "4 TO 5 KG", image: "./home/p1.jpg" },
+  { name: "BESAN", weight: "10 TO 12 KG", image: "./home/p16.png" },
+  { name: "URAD", weight: "7 TO 9 KG", image: "./home/p8.jpg" },
+  { name: "KALIMIRCH", weight: "7 TO 8 KG", image: "./home/p9.jpg" },
+  { name: "RAVA", weight: "8 TO 10 KG", image: "./home/p10.jpg" },
+  { name: "JUWAR", weight: "7 TO 9 KG", image: "./home/p12.jpg" },
+  { name: "SUGAR", weight: "8 TO 10 KG", image: "./home/p13.jpg" },
 ];
 
 const GrainDisplay = () => {
@@ -495,7 +495,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 1 HP Music Fully Automatic Aata Maker,Atta Chakki Flour Mill,Domestic Ghar Ghanti, GrindMaster 1.0 Flourmill",
       originalPrice: 24000,
       salePrice: 22000,
-      image: "../../public/product/1743697610738.jpg",
+      image: "./product/1743697610738.jpg",
       type: "Music",
       capacity: 1,
       inStock: true,
@@ -518,7 +518,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 1 HP Tolky Fully Automatic Aata Maker,Atta Chakki Flour Mill,Domestic Ghar Ghanti, GrindMaster 2.0 Flourmill",
       originalPrice: 26000,
       salePrice: 24000,
-      image: "../../public/product/1743789387958.jpg",
+      image: "./product/1743789387958.jpg",
       type: "Tolky",
       capacity: 1,
       inStock: true,
@@ -541,7 +541,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 1 HP Regular Steel Body Fully Automatic Pulverizer, Aata Maker, Flour Mill,Domestic Ghar Ghanti, SteelGrind 1.0 Flourmill",
       originalPrice: 27000,
       salePrice: 24000,
-      image: "../../public/product/1743790044525.jpg",
+      image: "./product/1743790044525.jpg",
       type: "Steel Body",
       capacity: 1,
       inStock: true,
@@ -587,7 +587,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 2 HP Regular Steel Body Fully Automatic Pulverizer, Aata Maker, Flour Mill,Domestic Ghar Ghanti,  UltraGrind 1.0 Flourmill",
       originalPrice: 38000,
       salePrice: 35000,
-      image: "../../public/product/1743845011093.jpg",
+      image: "./product/1743845011093.jpg",
       type: "UltraGrind 1.0",
       capacity: 2,
       inStock: true,
@@ -610,7 +610,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 4 HP Heavy Steel Body Fully Automatic Pulverizer, Aata Maker, Flour Mill,Domestic Ghar Ghanti, GrindMaster 1.0 Flourmill",
       originalPrice: 60000,
       salePrice: 55000,
-      image: "../../public/product/1743846107075.jpg",
+      image: "./product/1743846107075.jpg",
       type: "Steel Body",
       capacity: 4,
       inStock: true,
@@ -633,7 +633,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 5 HP Heavy Steel Body Fully Automatic Atta Chakki, Aata Maker, Flour Mill,Domestic Ghar Ghanti, MegaGrind Pro 1.0 Flourmill",
       originalPrice: 71000,
       salePrice: 67000,
-      image: "../../public/product/1743847515888.jpg",
+      image: "./product/1743847515888.jpg",
       type: "2 In 1 Pulveriser",
       capacity: 5,
       inStock: true,
@@ -656,7 +656,7 @@ const ProductsGallery = () => {
       name: "Dhaarmi 5 HP Heavy M.S. Body Fully Automatic Atta Chakki, Aata Maker, Flour Mill,Domestic Ghar Ghanti, MegaGrind Pro 2.0 Flourmill",
       originalPrice: 82000,
       salePrice: 75000,
-      image: "../../public/product/1743848732589.jpg",
+      image: "./product/1743848732589.jpg",
       type: "M.S. Body 2 In 1 Pulveriser",
       capacity: 5,
       inStock: true,
@@ -816,7 +816,7 @@ const AboutSection = () => (
         <div className="md:w-1/3 mb-6 md:mb-0">
           <motion.img
             whileHover={{ rotate: 3 }}
-            src="../../public/home/awards.png"
+            src="./home/awards.png"
             alt="Certificate"
             className="mx-auto w-64  rounded-lg"
           />
@@ -849,12 +849,12 @@ const AboutSection = () => (
 
 const RetailersSection = () => {
   const retailers = [
-    "../../public/home/amazon_logo.png",
-    "../../public/home/amazon_logo.png",
-    "../../public/home/amazon_logo.png",
-    "../../public/home/amazon_logo.png",
-    "../../public/home/amazon_logo.png",
-    "../../public/home/amazon_logo.png",
+    "./home/amazon_logo.png",
+    "./home/amazon_logo.png",
+    "./home/amazon_logo.png",
+    "./home/amazon_logo.png",
+    "./home/amazon_logo.png",
+    "./home/amazon_logo.png",
   ];
 
   return (
