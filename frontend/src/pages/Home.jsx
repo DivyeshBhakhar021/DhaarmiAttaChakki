@@ -6,6 +6,9 @@ import { Autoplay, Navigation,Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Lightbulb, BarChart3, Shield } from "lucide-react";
 import "swiper/css";
+// import { useNavigate } from "react-router-dom";
+// const navigate = useNavigate();
+
 import 'swiper/css/autoplay';
 import { useNavigate } from "react-router-dom";
 // import a from "../assets/imges/a1.jpg"
@@ -677,6 +680,7 @@ const ProductsGallery = () => {
   ]);
   const navigate = useNavigate();
 
+const [loading, setLoading] = useState(false);
 
 
   return (
@@ -743,29 +747,50 @@ const ProductsGallery = () => {
                   whileHover={{ y: -10 }}
                   className="border border-gray-200 rounded-lg overflow-hidden shadow-md relative group h-74 w-full"
                 >
-                  <div className="p-4 flex flex-col relative group">
+                  <div
+                    onClick={() => {
+                      setLoading(true);
+                      setTimeout(() => {
+                        navigate(`/product/${product._id}`);
+                      }, 3000); // 3 second delay
+                    }}
+                    className="p-4 flex flex-col relative group cursor-pointer"
+                  >
                     {/* Image Container */}
-                    <Link to={`/product/${product._id}`}>
-                      <div className="flex justify-center items-center h-52 mb-2">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="max-h-full max-w-full object-cover rounded"
-                        />
-                      </div>
+                    <div className="flex justify-center items-center h-52 mb-2">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="max-h-full max-w-full object-cover rounded"
+                      />
+                    </div>
 
-                      {/* Product Name with Link */}
-                      <h3 className="text-sm font-medium text-center text-gray-800 line-clamp-2 mb-2 hover:underline cursor-pointer">
-                        {product.name}
-                      </h3>
-                    </Link>
-
-                    {/* Hover Overlay */}
+                    {/* Product Name */}
+                    <h3 className="text-sm font-medium text-center text-gray-800 line-clamp-2 mb-2 hover:underline">
+                      {product.name}
+                    </h3>
                   </div>
                 </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
+
+            {loading && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                <div className="relative w-16 h-16">
+                  {/* Glowing Ring */}
+                  <div className="absolute inset-0 rounded-full border-4 border-t-transparent border-orange-500 animate-spin blur-sm opacity-70"></div>
+
+                  {/* Core Spinner */}
+                  <div className="absolute inset-0 rounded-full border-4 border-t-transparent border-orange-500 animate-spin"></div>
+
+                  {/* Center dot */}
+                  <div className="w-4 h-4 bg-orange-500 rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-lg shadow-orange-500"></div>
+                </div>
+              </div>
+            )}
+
+            
 
           {/* Custom Pagination Bullets BELOW the slider */}
           <div className="custom-swiper-pagination" />

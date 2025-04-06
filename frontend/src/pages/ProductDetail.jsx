@@ -197,6 +197,8 @@ const ProductDetail = ({ cart, setCart }) => {
   const [notification, setNotification] = useState(null);
 
   useEffect(() => {
+
+    window.scrollTo(0, 0);
     // Find the product from static data that matches the productId
     const fetchProduct = () => {
       const foundProduct = productsData.find((item) => item._id === productId);
@@ -245,10 +247,13 @@ const ProductDetail = ({ cart, setCart }) => {
         )}
         <button
           onClick={() => navigate("/commercial-aata-chakki")}
-          className="mb-4 text-blue-600 hover:underline"
+          className="mb-6 inline-flex items-center gap-2 bg-blue-500 text-white px-5 py-2 rounded-lg font-semibold text-base 
+             hover:bg-bule-600 hover:shadow-md hover:scale-105 transition-all duration-300 ease-in-out"
         >
-          ← Back to Catalog
+          <span className="text-xl">←</span>
+          Back 
         </button>
+
         <div className="bg-white rounded-xl shadow-md p-6 flex flex-col md:flex-row gap-6">
           <div className="md:w-1/2">
             <img

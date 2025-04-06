@@ -6,6 +6,7 @@ const DhaarmiWebsite = () => {
   const [counts, setCounts] = useState({ customers: 0, retailers: 0, services: 0 });
   
   useEffect(() => {
+    window.scrollTo(0, 0);
     // Set up intersection observer to trigger animations when section is in view
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {

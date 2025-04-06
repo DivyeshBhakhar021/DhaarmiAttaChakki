@@ -1309,7 +1309,15 @@ import { Link } from "react-router-dom";
 import { Grid, List, Menu, ShoppingCart, Heart } from "lucide-react";
 
 
+
+
 const ProductCatalog = ({ cart = [], setCart }) => {
+
+  
+    useEffect(()=>{
+      window.scrollTo(0, 0);
+    },[])
+    
   const [products, setProducts] = useState([
     {
       _id: "67eea972e260e4064d69e130",

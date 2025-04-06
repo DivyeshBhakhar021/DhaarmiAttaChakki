@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 
 import { BaseUrlWHATSAPP_NUMBER } from "../App";
+import { useEffect } from "react";
 const Contact = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   // Form state
   const [formData, setFormData] = useState({
     name: "",

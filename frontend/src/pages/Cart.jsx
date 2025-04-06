@@ -2,8 +2,15 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, X, ChevronUp, ChevronDown } from "lucide-react";
 import { BaseUrlWHATSAPP_NUMBER } from "../App";
+import { useEffect } from "react";
 
 const Cart = ({ cart, setCart, onCheckout }) => {
+
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [showCheckoutForm, setShowCheckoutForm] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
