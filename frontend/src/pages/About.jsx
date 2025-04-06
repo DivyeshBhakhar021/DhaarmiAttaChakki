@@ -36,16 +36,16 @@ const DhaarmiWebsite = () => {
         const progress = currentStep / steps;
         
         setCounts({
-          customers: Math.floor(progress * 700),
-          retailers: Math.floor(progress * 1200),
+          customers: Math.floor(progress * 100),
+          retailers: Math.floor(progress * 500),
           services: Math.floor(progress * 100)
         });
         
         if (currentStep >= steps) {
           clearInterval(timer);
           setCounts({
-            customers: 700,
-            retailers: 1200,
+            customers: 100,
+            retailers: 500,
             services: 100
           });
         }

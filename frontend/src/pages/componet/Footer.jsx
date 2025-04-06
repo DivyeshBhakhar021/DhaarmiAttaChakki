@@ -31,10 +31,6 @@ const Footer = () => (
             {[
               { name: "About Us", path: "/about" },
               { name: "Contact Us", path: "/contact" },
-              { name: "Service Request", path: "/service-request" },
-              { name: "Privacy Policy", path: "/privacy-policy" },
-              { name: "Return Policy", path: "/return-policy" },
-              { name: "Terms & Conditions", path: "/terms-conditions" },
             ].map((item) => (
               <li key={item.name}>
                 <motion.div whileHover={{ x: 5, color: "#0056b3" }}>
@@ -65,7 +61,9 @@ const Footer = () => (
         </div>
 
         <div className="md:w-1/4 mb-8 md:mb-0 md:px-4">
-          <h3 className="text-blue-900 font-bold text-lg mb-4 underline decoration-blue-900">Aata Chakki</h3>
+          <h3 className="text-blue-900 font-bold text-lg mb-4 underline decoration-blue-900">
+            Aata Chakki
+          </h3>
           <ul className="space-y-2">
             {["Premium Range", "Commercial Range"].map((item) => (
               <li key={item}>
@@ -96,7 +94,9 @@ const Footer = () => (
         </div>
 
         <div className="md:w-1/4 md:px-4">
-          <h3 className="text-blue-900 font-bold text-lg mb-4 underline decoration-blue-900">Contact Us</h3>
+          <h3 className="text-blue-900 font-bold text-lg mb-4 underline decoration-blue-900">
+            Contact Us
+          </h3>
           <div className="space-y-4">
             <p className="flex items-start">
               <svg
@@ -120,8 +120,7 @@ const Footer = () => (
                 />
               </svg>
               <span className="text-gray-600">
-                Plot No. 3/b-2, Haripar(Pal), Opp. Motel The Village Hotel,
-                Kalawad Road, Haripar Pal, Rajkot-360005, Gujarat, India.
+                Jammu & Kashmir-180001, Gujarat, India
               </span>
             </p>
             <p className="flex items-center">
@@ -139,7 +138,7 @@ const Footer = () => (
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span className="text-gray-600">+91 8866538881</span>
+              <span className="text-gray-600">+91 6005544032</span>
             </p>
             <p className="flex items-center">
               <svg
@@ -156,7 +155,7 @@ const Footer = () => (
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span className="text-gray-600">marketing@Dhaarmi.com</span>
+              <span className="text-gray-600">dhaarmiattamaker@gmail.com</span>
             </p>
           </div>
         </div>

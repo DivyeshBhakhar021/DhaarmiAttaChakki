@@ -55,7 +55,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="bg-cream-100 py-12"
+        className="bg-cream-100 py-4"
       >
         <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center">
           {/* Left Side: Text */}
@@ -118,8 +118,8 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "#00337C" }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => navigate("/contact")} // Navigate to Contact page
-              className="bg-blue-800 text-white py-2 sm:py-3 px-6 sm:px-8 rounded-full font-medium text-sm sm:text-base"
+              onClick={() => navigate("/contact")}
+              className="bg-blue-800 text-white py-3 px-8 text-2xl sm:text-xl rounded-full font-medium"
             >
               Inquire Now
             </motion.button>
@@ -248,7 +248,7 @@ const FeaturesSection = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0 }}
@@ -374,7 +374,7 @@ const grains = [
   { name: "MUNG", weight: "7 TO 10 KG", image: "./home/p4.jpg" },
   { name: "RICE", weight: "7 TO 9 KG", image: "./home/p5.jpeg" },
   { name: "DHANIYA", weight: "4 TO 5 KG", image: "./home/p1.jpg" },
-  { name: "BESAN", weight: "10 TO 12 KG", image: "./home/p16.png" },
+  { name: "BESAN", weight: "10 TO 12 KG", image: "./home/P16.png" },
   { name: "URAD", weight: "7 TO 9 KG", image: "./home/p8.jpg" },
   { name: "KALIMIRCH", weight: "7 TO 8 KG", image: "./home/p9.jpg" },
   { name: "RAVA", weight: "8 TO 10 KG", image: "./home/p10.jpg" },
@@ -745,42 +745,22 @@ const ProductsGallery = () => {
                 >
                   <div className="p-4 flex flex-col relative group">
                     {/* Image Container */}
-                    <div className="flex justify-center items-center h-52 mb-2">
-                      <img
-                        src={`${product.image}`}
-                        alt={product.name}
-                        className="max-h-full max-w-full object-cover rounded"
-                      />
-                    </div>
+                    <Link to={`/product/${product._id}`}>
+                      <div className="flex justify-center items-center h-52 mb-2">
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="max-h-full max-w-full object-cover rounded"
+                        />
+                      </div>
 
-                    {/* Product Name */}
-                    <h3 className="text-sm font-medium text-center text-gray-800 line-clamp-2 mb-2">
-                      {product.name}
-                    </h3>
+                      {/* Product Name with Link */}
+                      <h3 className="text-sm font-medium text-center text-gray-800 line-clamp-2 mb-2 hover:underline cursor-pointer">
+                        {product.name}
+                      </h3>
+                    </Link>
 
                     {/* Hover Overlay */}
-                    <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center transition-all duration-500 opacity-0 group-hover:opacity-80 translate-y-full group-hover:translate-y-0 p-4">
-                      <div className="text-center">
-                        <div className="flex justify-center items-center space-x-2">
-                          <span className="text-gray-300 text-sm line-through">
-                            ₹{product.originalPrice}
-                          </span>
-                          <span className="text-xl font-bold text-white">
-                            ₹{product.salePrice}
-                          </span>
-                        </div>
-                        <Link to={`/product/${product._id}`}>
-                          <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={() => navigate("/commercial-aata-chakki")}
-                            className="mt-3 bg-black border-2 border-white text-white py-2 px-4 rounded text-base font-medium"
-                          >
-                            Select options
-                          </motion.button>
-                        </Link>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </SwiperSlide>
@@ -789,14 +769,6 @@ const ProductsGallery = () => {
 
           {/* Custom Pagination Bullets BELOW the slider */}
           <div className="custom-swiper-pagination" />
-
-          {/* Custom Navigation Buttons */}
-          <div className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-10 text-blue-900 bg-white rounded-full p-2 shadow-md">
-            &#10094;
-          </div>
-          <div className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-blue-900 bg-white rounded-full p-2 shadow-md">
-            &#10095;
-          </div>
         </div>
       </div>
     </section>
@@ -893,9 +865,36 @@ const RetailersSection = () => {
           }}
         ></div> */}
       </div>
+      <div class="flex flex-col lg:flex-row gap-6 p-4 max-w-6xl mx-auto">
+  {/* <!-- Video 1 --> */}
+  <div class="relative w-full lg:w-1/2 h-60 sm:h-72 md:h-80 lg:h-[400px] xl:h-[450px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/lXxiPnTCh3I" 
+      title="YouTube video 1" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  {/* <!-- Video 2 --> */}
+  <div class="relative w-full lg:w-1/2 h-60 sm:h-72 md:h-80 lg:h-[400px] xl:h-[450px] 2xl:h-[500px] rounded-xl overflow-hidden shadow-lg">
+    <iframe 
+      class="absolute top-0 left-0 w-full h-full"
+      src="https://www.youtube.com/embed/cWRXRrste6E" 
+      title="YouTube video 2" 
+      frameborder="0" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
     </section>
   );
 };
+
+
+
 
 
 const HomePage = () => {

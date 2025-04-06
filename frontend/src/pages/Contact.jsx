@@ -182,7 +182,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-blue-900">Call Us</h3>
-                  <p className="text-gray-500 mt-2">+918866538881</p>
+                  <p className="text-gray-500 mt-2">+916005544032</p>
                 </div>
               </div>
             </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-green-800">WhatsApp</h3>
-                  <p className="text-gray-500 mt-2">+918866538881</p>
+                  <p className="text-gray-500 mt-2">+916005544032</p>
                 </div>
               </div>
             </div>
@@ -228,7 +228,9 @@ const Contact = () => {
                 </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-blue-900">Email Us</h3>
-                  <p className="text-gray-500 mt-2">marketing@Dhaarmi.com</p>
+                  <p className="text-gray-500 mt-2">
+                    dhaarmiattamaker@gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -261,8 +263,7 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="text-xl font-bold text-blue-900">Address</h3>
                   <p className="text-gray-500 mt-2">
-                    Plot no. 3/b-2, Haripar(pal), Opp. Motel the village Resort,
-                    Kalawad Road, Haripar Pal, Rajkot-360005, Gujarat, India
+                    Jammu & Kashmir-180001, Gujarat, India
                   </p>
                 </div>
               </div>
@@ -439,12 +440,12 @@ const Contact = () => {
       </div>
       <div style={containerStyle}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.9982550127265!2d75.13984562939285!3d32.91519954197569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391dd2bf6294ee91%3A0xe536574cfe583d14!2sUdhampur%20182101!5e1!3m2!1sen!2sin!4v1743176963323!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1618705.8841432168!2d73.94534277324063!3d33.52457806085088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1092499ffa89d%3A0x6567a6d4697e7f1!2sJammu%20and%20Kashmir!5e1!3m2!1sen!2sin!4v1743934245246!5m2!1sen!2sin"
           style={iframeStyle}
-          allowFullScreen=""
+          allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Udhampur"
+          title="Jammu and Kashmir"
         />
       </div>
     </div>
