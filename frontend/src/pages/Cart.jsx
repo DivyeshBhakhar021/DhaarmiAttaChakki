@@ -134,7 +134,7 @@ const Cart = ({ cart, setCart, onCheckout }) => {
                     className="flex items-center border-b py-4 hover:bg-blue-50"
                   >
                     <img
-                      src={`http://localhost:5000/${item.image}`}
+                      src={`${item.image}`}
                       alt={item.name}
                       className="w-16 h-16 object-contain mr-4"
                     />

@@ -64,7 +64,7 @@ const Footer = () => (
           <h3 className="text-blue-900 font-bold text-lg mb-4 underline decoration-blue-900">
             Aata Chakki
           </h3>
-          <ul className="space-y-2">
+          {/* <ul className="space-y-2">
             {["Premium Range", "Commercial Range"].map((item) => (
               <li key={item}>
                 <motion.a
@@ -88,6 +88,37 @@ const Footer = () => (
                   </svg>
                   {item}
                 </motion.a>
+              </li>
+            ))}
+          </ul> */}
+          <ul className="space-y-2">
+            {[
+              { name: "Premium Range", path: "/commercial-aata-chakki" },
+              { name: "Commercial Range", path: "/commercial-aata-chakki" },
+            ].map((item) => (
+              <li key={item.name}>
+                <motion.div whileHover={{ x: 5, color: "#0056b3" }}>
+                  <Link
+                    to={item.path}
+                    className="text-gray-600 hover:text-blue-800 flex items-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-4 w-4 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                    {item.name}
+                  </Link>
+                </motion.div>
               </li>
             ))}
           </ul>
